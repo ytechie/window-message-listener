@@ -1,0 +1,15 @@
+<html>
+    <Title>Window Listener Test Page</Title>
+</html>
+<body>
+    <p>This page can be embedded in an iframe, and it listens for window events.</p>
+    <span id="windowListenerOutput" />
+
+    <script>
+        var outputElement = document.getElementById('windowListenerOutput');
+
+        window.addEventListener('message', event => {
+            outputElement.innerText = JSON.stringify(event.data);
+        });
+    </script>
+</body>
